@@ -1,0 +1,288 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+    background-color: #585a58
+}
+
+.loginSec {
+    width: 450px;
+    margin: 40px auto 0
+}
+
+.loginSec .logo {
+    text-align: center
+}
+.regSec .logo figure img,
+.loginSec .logo figure img {
+    width: 300px;
+    margin: 0 0 20px;
+}
+
+.loginSec .logiheader {
+    background-color: #ea682b;
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    width: 100%;
+    text-align: center;
+    margin: 50px 0 0;
+    padding: 0 0 10px
+}
+
+.loginSec .logiheader .profilePic {
+    padding: 20px;
+    border: 5px solid #585a58;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    position: relative;
+    top: -50px;
+    border-radius: 100px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+}
+
+.loginSec .logiheader .profilePic:before {
+    content: "";
+    background-color: #fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 100px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+}
+
+.regSec .logiheader .profilePic figure,
+.loginSec .logiheader .profilePic figure {
+    position: relative;
+    z-index: 1;
+    margin: -16px 0 0 -4px;
+}
+
+.regSec .logiheader .profilePic figure img,
+.loginSec .logiheader .profilePic figure img {
+    width: 58px;
+}
+
+.loginSec .logiheader h1 {
+    position: relative;
+    top: -40px;
+    z-index: 10;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase
+}
+
+.loginSec .formSec {
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    padding: 20px 40px 40px
+}
+
+.loginSec .formSec input[type="submit"], .loginSec .formSec input[type="button"] {
+    width: 100%;
+    padding: 15px 0
+}
+
+.loginSec .formSec input[type="text"] {
+    background: url(../images/un.jpg) no-repeat right center;
+    padding-right: 12%;
+    width: 84.5%
+}
+
+.loginSec .formSec input[type="password"] {
+    background: url(../images/pwd.png) no-repeat right center;
+    padding-right: 12%;
+    width: 84.5%
+}
+
+.loginSec .loginFp {
+    text-align: center;
+    margin: 20px 0 0;
+    color: #777
+}
+
+.loginSec .loginFp a {
+    padding: 0 10px;
+    font-size: 13px
+}
+
+.regSec {
+    width: 750px;
+    margin: 40px auto 0
+}
+
+.regSec .logo {
+    text-align: center
+}
+
+.regSec .logiheader {
+    background-color: #ea682b;
+    border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px 5px 0 0;
+    width: 100%;
+    text-align: center;
+    margin: 50px 0 0;
+    padding: 0 0 10px
+}
+
+.regSec .logiheader .profilePic {
+    padding: 20px;
+    border: 5px solid #585a58;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    position: relative;
+    top: -50px;
+    border-radius: 100px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+}
+
+.regSec .logiheader .profilePic:before {
+    content: "";
+    background-color: #fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 100px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+}
+
+.regSec .logiheader h1 {
+    position: relative;
+    top: -40px;
+    z-index: 10;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase
+}
+
+.regSec .formSec,
+.regSec #bigLoader {
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    -webkit-border-radius: 0 0 5px 5px;
+    padding: 20px 40px 40px;
+}
+
+.regSec .formSec input[type="submit"], .regSec .formSec input[type="button"] {
+    width: 48%;
+    padding: 15px 0
+}
+
+.regSec .formSec fieldset {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-bottom: 26px
+}
+
+.regSec .step {
+    width: 55px;
+    height: 43px;
+    text-align: center;
+    padding: 12px 0 0;
+    border-radius: 100px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    display: inline-block;
+    margin: 0 20px;
+    font: 20px 'robotobold';
+}
+
+.regSec .stepSel {
+    background-color: #00437c;
+    border: 1px solid #00437c;
+    color: #fff
+}
+
+.regSec .formSec .formHolder {
+    width: 100%;
+    overflow: hidden
+}
+
+.regSec .formSec .formHolder .formSlider {
+    width: 2000px;
+    float: left;
+    position: relative
+}
+
+.regSec .formSec .formHolder .formSlider .formEach {
+    float: left;
+    width: 665px;
+    margin: 0 5px 0 0
+}
+
+.regSec .formSec .formHolder .formSlider .formEach .eachInptLeft {
+    width: 47%;
+    float: left
+}
+
+.regSec .formSec .formHolder .formSlider .formEach .eachInptRight {
+    width: 47%;
+    float: right
+}
+
+.regSec .formSec .formHolder .formSlider .formEach .backStep {
+    background-color: #888 !important;
+}
+
+.regSec .formSec .formHolder .formSlider .formEach input[type="radio"] {
+    float: left;
+    margin: 18px 5px 30px 0
+}
+
+.regSec .formSec .formHolder .formSlider .formEach span {
+    display: block;
+    float: left;
+    margin: 18px 30px 0 0;
+    font-size: 13px;
+}
+
+.btnRight {
+    float: right
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

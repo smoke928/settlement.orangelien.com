@@ -1,0 +1,1838 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('../fonts/stylesheet.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #333;
+    line-height: 20px;
+    transition-property: width;
+    -moz-transition-property: width;
+    -webkit-transition-property: width;
+    transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    -webkit-transition-timing-function: ease;
+    outline: none;
+    font-family: 'robotoregular';
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    vertical-align: baseline;
+    outline: 0 none;
+    border: none;
+    background-color: #585a58;
+}
+
+a, img {
+    border: none;
+    text-decoration: none;
+    color: #0e83dc;
+}
+
+ul, li {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+.clear {
+    clear: both
+}
+
+h1 {
+    font: 34px/30px 'robotoregular';
+    color: #fff;
+    float: left;
+    font-weight: normal
+}
+
+h2 {
+    font: 28px/30px 'robotoregular';
+    color: #333;
+    float: left;
+    font-weight: normal
+}
+
+a {
+    font-size: 14px;
+    color: #0e76bc
+}
+
+.back {
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    padding: 5px 10px
+}
+
+.back a {
+    float: left;
+    display: block;
+    padding: 10px 20px 10px 30px;
+    text-transform: uppercase;
+    background: url(../images/backArrow.png) no-repeat 15px center #efefef;
+    color: #333;
+    font-size: 12px
+}
+
+label {
+    font-size: 14px;
+    float: left;
+    width: 20%;
+    text-align: right;
+    margin: 10px 0 0
+}
+
+input[type="text"], input[type="password"] {
+    font-size: 14px;
+    float: right;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 36px;
+    padding: 0 12px;
+    width: 70%;
+    margin: 0 0 10px
+}
+
+input[type="file"] {
+    font-size: 14px;
+    float: left;
+    margin: 0 0 0 15px
+}
+
+select {
+    font-size: 14px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 36px;
+    padding: 0 12px;
+    width: 100%;
+    margin: 0 0 10px;
+}
+
+textarea {
+    font-size: 14px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #ccc;
+    height: 50px;
+    padding: 3%;
+    width: 70%;
+    margin: 0 0 10px;
+    float: right;
+}
+
+select option {
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+    float: left
+}
+
+input[type="submit"], input[type="button"] {
+    background-color: #27646a;
+    padding: 12px 30px;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    font: 16px 'robotoregular';
+    cursor: pointer
+}
+
+input[type="reset"] {
+    background-color: #a1a1a1;
+    padding: 12px 30px;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    font: 16px 'robotoregular';
+    cursor: pointer
+}
+
+.msgHolder {
+    min-height: 5px;
+    height: auto
+}
+
+.errorMsg {
+    text-align: center;
+    color: #c30;
+    font: 16px 'robotoregular';
+    display: none;
+    padding: 12px 20px;
+    position: fixed;
+    left: 50%;
+    border: 3px solid #c30;
+    background-color: white;
+    z-index: 10;
+    font-weight: bold;
+}
+
+.errorMsg p {
+    color: #c30;
+}
+
+.errorMsg span.successMsg {
+    color: #075;
+}
+
+.errorMsg .closeButton .fa {
+    font-size: 21px;
+    color: #777777;
+    position: absolute;
+    right: -7px;
+    top: -7px;
+    cursor: pointer;
+    background: White;
+}
+
+.errorMsgSimple {
+    text-align: center;
+    color: #f00;
+    font: 16px 'robotoregular';
+    padding: 12px 20px;
+    border: 1px solid red;
+    background-color: white;
+    margin: 16px 0;
+}
+
+.successMsgSimple {
+    text-align: center;
+    color: #00f;
+    font: 16px 'robotoregular';
+    padding: 12px 20px;
+    border: 1px solid #00f;
+    background-color: white;
+    margin: 16px 0;
+}
+
+.indent_1 {
+    margin: 0 0 0 22px;
+}
+
+.formSec label {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 5px
+}
+
+.formSec input[type="text"], .formSec input[type="password"] {
+    float: left;
+    width: 94%
+}
+
+.formSec .styled-select {
+    width: 100%;
+    float: left
+}
+
+.eachInfo label {
+    text-align: left;
+    margin-left: 0 !important;
+}
+
+@-moz-document url-prefix() {
+    input[type="password"] {
+        font-size: 7px;
+    }
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+.styled-select select {
+    background: transparent;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    height: 36px;
+    -webkit-appearance: none;
+    margin: 0
+}
+
+.styled-select {
+    width: 76%;
+    float: right;
+    height: 36px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    background: url(../images/new_arrow.png) no-repeat right;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.sectionHead {
+    background-color: #ea682b;
+    width: 100%;
+    text-align: center;
+}
+
+.sectionHead span {
+    display: block;
+    float: left;
+    background-color: #bb4e1a;
+    padding: 15px;
+    min-width: 38px;
+    min-height: 39px;
+}
+.sectionHead span.fontawesome {
+    padding: 19px 15px 12px;
+}
+
+.sectionHead h1 {
+    margin: 18px 0 0 20px
+}
+
+.sectionHeadIcon {
+    font-size: 33px !important;
+    color: White;
+    text-align: center;
+    width: 100%;
+}
+
+.leftMenu {
+    width: 270px;
+    position: fixed;
+    top: 0px;
+    z-index: 1;
+}
+
+.leftMenu .logo {
+    width: 100%;
+    background-color: #fff;
+}
+
+.leftMenu .logo img {
+    width: 257px;
+    margin: 20px 0 20px 13px;
+}
+
+.leftMenu #menu li .select {
+    background-color: #0068a6;
+}
+
+.leftMenu #menu, #menu ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    float: left;
+    z-index: 100;
+    width: 100%;
+}
+
+.leftMenu #menu a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding: 13px 0;
+    float: left;
+    width: 70%;
+    padding-left: 30%;
+    background-color: #ED723D;
+}
+
+#menu a:hover {
+    color: #fff;
+}
+
+#menu li {
+    position: relative;
+    float: left;
+    list-style: none;
+}
+
+#menu li a {
+    float: left;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none
+}
+
+#menu ul {
+    position: absolute;
+    width: 180px;
+    left: 270px;
+    display: none;
+}
+
+#menu li ul li {
+    border-left: 1px solid #585a58;
+    margin: -1px 0 0 -5px !important;
+}
+
+#menu li ul a {
+    width: 90% !important;
+    float: left;
+    background-color: #003766;
+    padding: 13px 5% !important;
+}
+
+#menu li ul a:hover { /*	background-color:#0068a6;*/
+}
+
+#menu ul ul {
+    top: auto;
+}
+
+#menu li ul ul {
+    left: 180px;
+}
+
+.leftMenu ul li {
+    display: block;
+    width: 100%;
+    margin-bottom: 1px;
+    float: left
+}
+
+.leftMenu ul li a:before {
+    vertical-align: middle;
+}
+
+.leftMenu ul li a.dashboard:before {
+    font-family: FontAwesome;
+    font-size: 20px;
+    content: "\f0e4";
+    margin: 0 39px 0 -60px;
+}
+
+.leftMenu ul li a.client:before {
+    font-family: FontAwesome;
+    font-size: 20px;
+    content: "\f2b5";
+    margin: 0 36px 0 -62px;
+}
+
+.leftMenu ul li a.vendor:before {
+    font-family: FontAwesome;
+    font-size: 20px;
+    content: "\f263";
+    margin: 0 43px 0 -57px;
+}
+
+.leftMenu ul li a.report:before {
+    font-family: FontAwesome;
+    font-size: 20px;
+    content: "\f247";
+    margin: 0 37px 0 -60px;
+}
+
+.leftMenu ul li a.report2:before {
+    font-family: FontAwesome;
+    font-size: 20px;
+    content: "\f022";
+    margin: 0 39px 0 -59px;
+}
+
+.leftMenu ul li a.order:before {
+    font-family: FontAwesome;
+    font-size: 20px;
+    content: "\f217";
+    margin: 0 41px 0 -59px;
+}
+
+.leftMenu ul li a.order2:before {
+    font-family: FontAwesome;
+    font-size: 20px;
+    content: "\f07a";
+    margin: 0 41px 0 -59px;
+}
+
+.leftMenu ul li a.staff:before {
+    font-family: FontAwesome;
+    font-size: 20px;
+    content: "\f0c0";
+    margin: 0 39px 0 -61px;
+}
+
+.leftMenu ul li a.config {
+    background: url(../images/menu_icons/confIcon.png) no-repeat 20px 5px #003766
+}
+
+.leftMenu ul li a.config:hover, .leftMenu ul li a.configActive {
+    background: url(../images/menu_icons/confIcon.png) no-repeat 20px -30px #003766;
+    color: #fff !important
+}
+
+.leftMenu ul li a.log:before {
+    font-family: FontAwesome;
+    font-size: 20px;
+    content: "\f2c3";
+    margin: 0 37px 0 -60px;
+}
+
+.inpHolder.inset {
+    padding: 24px 12px;
+}
+
+.rightCont {
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 270px;
+}
+
+.rightCont .settingSec {
+    text-align: right;
+    padding: 10px 20px 10px 0;
+    position: relative;
+    background-color: #585a58;
+}
+
+.rightCont .settingSec p {
+    float: right;
+    display: block;
+    font-size: 13px;
+    color: #fff;
+    margin: 5px 10px 0 0
+}
+
+.rightCont .settingSec p a {
+    color: White;
+}
+
+.rightCont .settingSec figure {
+    float: right
+}
+
+.rightCont .settingSec .accountSec {
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    background-color: #fff;
+    position: absolute;
+    right: 31px;
+    top: 44px;
+    width: 120px;
+    -webkit-box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.67);
+    box-shadow: 0px 5px 3px -3px rgba(0, 0, 0, 0.67);
+}
+
+.rightCont .settingSec .accountSec .arrLink {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: -5px;
+    right: 15px;
+    background-color: #fff;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.rightCont .settingSec .accountSec ul li {
+    float: left;
+}
+
+.rightCont .settingSec .accountSec ul li a {
+    text-align: left;
+    display: block;
+    padding: 10px 0 10px 30px;
+    vertical-align: middle;
+}
+
+.rightCont .settingSec .accountSec ul li a.account:before {
+    font-family: FontAwesome;
+    content: "\f2bd";
+    font-size: 21px;
+    margin: 0 9px 0 -30px;
+    color: #7C7C7C;
+    vertical-align: middle;
+}
+
+.rightCont .settingSec .accountSec ul li a.logout {
+    background: url(../images/logoutIcon.jpg) no-repeat left center
+}
+
+.rightCont .settingSec img {
+    cursor: pointer
+}
+
+.rightCont .contentSec {
+    width: 100%;
+    background-color: #fff;
+    min-height: 740px;
+    min-width: 1024px;
+}
+
+.rightCont .contentSec .contHolder {
+    padding: 40px 0 0 70px; /* max-width:900px;*/
+    width: 90%;
+}
+
+.rightCont .contentSec .contHolder .inpHolder {
+    width: 100%
+}
+
+.rightCont .contentSec .contHolder .inpHolder .eachInptLeft {
+    width: 42%;
+    float: left;
+    margin: 0 5% 0 0;
+    position: relative
+}
+
+.rightCont .contentSec .contHolder .inpHolder .eachInptRight {
+    width: 42%;
+    float: left
+}
+
+.rightCont .contentSec .contHolder .inpHolder .eachInptRight input[type="reset"] {
+    width: auto;
+    float: right
+}
+
+.rightCont .contentSec .contHolder .inpHolder .eachInptRight input[type="submit"] {
+    width: auto;
+    float: right;
+    margin: 0 10px
+}
+
+/*Manage client css*/
+.rightCont .contentSec .contHolder .searchSec {
+    background-color: #efefef;
+    padding: 20px 20px 0;
+    margin-bottom: 10px;
+}
+
+.rightCont .contentSec .contHolder .searchSec .searchEach {
+    width: 250px;
+    float: left;
+    margin: 0 15px 0 0
+}
+
+.rightCont .contentSec .contHolder .searchSec input[type="submit"] {
+    float: left;
+    padding: 7px 30px;
+    margin: 0
+}
+
+.rightCont .contentSec .contHolder .tableData {
+    width: 100%;
+}
+
+.rightCont .contentSec .contHolder .tableData table {
+    width: 100%;
+    font-size: 13px;
+    margin-top: 10px;
+    float: left
+}
+
+.rightCont .contentSec .contHolder .tableData thead td {
+    background-color: #d6e6f4;
+    padding: 13px 10px;
+    font-weight: 700;
+    color: #111;
+    border-bottom: 1px solid #92bce1
+}
+
+.rightCont .contentSec .contHolder .tableData tbody td {
+    padding: 5px 10px;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    vertical-align: middle
+}
+
+.rightCont .contentSec .contHolder .tableData tbody td a, .overlay .tblSec .ordTbl td a {
+    background-color: #fff;
+    padding: 12px 0;
+    width: 27px;
+    height: 4px;
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    color: #333;
+}
+.rightCont .contentSec .contHolder .tableData tbody td a.simpleButton {
+    margin: 1px 3px;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    border: 1px solid #0000ff;
+}
+
+.rightCont .contentSec .contHolder .tableData tbody td a.recordcopy {
+    border: 1px solid white;
+    background: #999900;
+    position: relative;
+}
+.rightCont .contentSec .contHolder .tableData tbody td a.recordcopy:after {
+    font-family: FontAwesome;
+    content: "\f0c5";
+    color: #fff;
+    font-size: 13.25px;
+    position: absolute;
+    margin: -4px 0 0 -6px;
+}
+
+.rightCont .contentSec .contHolder .tableData tbody td a.chargecreditcard {
+    border: 1px solid white;
+    background: darkorange;
+    position: relative;
+}
+.rightCont .contentSec .contHolder .tableData tbody td a.chargecreditcard:after {
+    font-family: FontAwesome;
+    content: "\f09d";
+    color: #000;
+    font-size: 13.25px;
+    position: absolute;
+    margin: -4px 0 0 -6px;
+}
+
+.rightCont .contentSec .contHolder .tableData tbody td a.view {
+    border: 1px solid white;
+    background: url(../images/view.png) no-repeat center center #00437c;
+}
+
+.rightCont .contentSec .contHolder .tableData tbody td a.edit, .rightCont .contentSec .contHolder .tableData tbody td a.edit1,
+.overlay .tblSec .ordTbl a.edit {
+    border: 1px solid white;
+    background: url(../images/edit.png) no-repeat center center #2a8e3b;
+}
+
+.rightCont .contentSec .contHolder .tableData tbody td a.delete, .overlay .tblSec .ordTbl td a.delete {
+    border: 1px solid white;
+    background: url(../images/delete.png) no-repeat center center #d2000f;
+}
+
+.rightCont .contentSec .contHolder .tableData tbody td a.arrowup {
+    border: 1px solid white;
+    background: url(../images/arrow.png) no-repeat center 10px #00437c;
+}
+
+.rightCont .contentSec .contHolder .tableData tbody td a.arrowdown {
+    border: 1px solid white;
+    background: url(../images/arrow.png) no-repeat center -6px #00437c;
+}
+
+.rightCont .contentSec .contHolder .sortby {
+    width: 250px;
+    float: left;
+    margin-bottom: 10px
+}
+
+.rightCont .contentSec .contHolder .sortby label {
+    float: left;
+    display: block;
+    width: auto;
+    margin: 10px 10px 0 0
+}
+
+.rightCont .contentSec .contHolder .sortby select {
+    width: 100%;
+    float: left
+}
+
+.rightCont .contentSec .contHolder .sortby .styled-select {
+    width: 120px;
+    float: left;
+    margin: 0
+}
+
+.rightCont .contentSec .contHolder h2 {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 30px
+}
+
+.rightCont .contentSec .contHolder .range {
+    width: 600px;
+    float: left;
+    display: inline-table;
+    text-align: right;
+    margin-bottom: 10px
+}
+
+.rightCont .contentSec .contHolder .range ul li {
+    display: inline-block;
+    float: left
+}
+
+.rightCont .contentSec .contHolder .range ul li a {
+    display: block;
+    float: left;
+    padding: 5px 15px;
+    background-color: #efefef;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    color: #333;
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.rightCont .contentSec .contHolder .range ul li a:hover, .rightCont .contentSec .contHolder .range ul li a.rangeSel {
+    display: block;
+    float: left;
+    padding: 5px 15px;
+    background-color: #27646a;
+    border: 1px solid #27646a;
+    font-size: 13px;
+    color: #fff;
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.rightCont .contentSec .contHolder .ProfilePic {
+    width: 160px;
+    float: left;
+    background-color: #efefef;
+    height: 160px;
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    margin: 40px 0 0;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #ccc
+}
+
+.rightCont .contentSec .contHolder .ProfilePic img {
+    width: 100%;
+    height: 100%
+}
+
+.rightCont .contentSec .contHolder .ProfileInfo {
+    width: 690px;
+    float: left;
+    margin: 40px 40px 0
+}
+
+.rightCont .contentSec .contHolder .ProfileInfo .eachInfo {
+    padding: 20px 0;
+    border-bottom: 1px dashed #ccc
+}
+
+.rightCont .contentSec .contHolder .ProfileInfo .eachInfo h3 {
+    font: 18px 'robotoregular';
+    margin-bottom: 15px
+}
+
+.rightCont .contentSec .contHolder .ProfileInfo .eachInfo h2 {
+    border-bottom: none;
+    margin-bottom: 10px;
+}
+
+.rightCont .contentSec .contHolder .ProfileInfo .eachInfo h2 img {
+    float: left;
+    margin: 2px 10px 0 0
+}
+
+.rightCont .contentSec .contHolder .ProfileInfo .eachInfo h2 span {
+    display: inline-block;
+    float: left;
+    width: auto;
+    font: 18px 'robotoregular';
+}
+
+.rightCont .contentSec .contHolder .ProfileInfo .eachInfo p {
+    margin-left: 30px;
+    font-size: 14px;
+    line-height: 20px
+}
+
+.rightCont .contentSec .contHolder .ProfileInfo .eachInfo label {
+    float: left;
+    width: 140px;
+    margin: 0 0 0 30px
+}
+
+.rightCont .contentSec .contHolder .ProfileInfo .eachInfo span {
+    font-size: 14px;
+    display: block;
+    float: left;
+    width: auto;
+    margin-bottom: 15px;
+}
+
+.rightCont .contentSec .contHolder .ProfileInfo .eachInfo span.email {
+    background: url(../images/mailIcon.png) no-repeat left 4px;
+    padding: 3px 0 10px 30px;
+}
+
+.rightCont .contentSec .contHolder .ProfileInfo .eachInfo span.phone {
+    background: url(../images/callIcon.png) no-repeat top left;
+    padding: 3px 0 10px 30px;
+}
+
+/*Pagination*/
+.rightCont .contentSec .contHolder .pagination {
+    background-color: #efefef;
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+    display: table;
+    text-align: right;
+    width: 100%
+}
+
+.rightCont .contentSec .contHolder .pagination .pageHolder {
+    margin: 0 10px 0 0
+}
+
+.rightCont .contentSec .contHolder .pagination .pageHolder a {
+    background-color: #fff;
+    padding: 7px 0;
+    height: 10px;
+    width: 38px;
+    text-align: center;
+    display: inline-table;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    color: #333
+}
+
+.rightCont .contentSec .contHolder .pagination .pageHolder a.prev {
+    background: url(../images/pgLArrow.png) no-repeat center center #fff;
+}
+
+.rightCont .contentSec .contHolder .pagination .pageHolder a.lst {
+    background: url(../images/pgRArrow.png) no-repeat center center #fff;
+}
+
+.rightCont .contentSec .contHolder .pagination .pageHolder a:hover, .rightCont .contentSec .contHolder .pagination .pageHolder a.pgSel {
+    background-color: #00437c;
+    border: 1px solid #00437c;
+    color: #fff;
+}
+
+/* file mapping*/
+.rightCont .contentSec .contHolder .tableDataOth {
+    margin-bottom: 50px
+}
+
+.rightCont .contentSec .contHolder .tableDataOth tbody td {
+    padding: 12px 10px;
+    color: #333;
+    border-bottom: 1px solid #ccc;
+}
+
+.fileSelect {
+    margin: 0 !important;
+    float: left
+}
+
+/*Dashboard css*/
+.rightCont .contentSec .contHolder .allMember {
+    margin-bottom: 50px;
+}
+
+.rightCont .contentSec .contHolder .member {
+    width: 200px;
+    height: 210px;
+    background-color: #efefef;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    overflow: hidden;
+    display: inline-table;
+    text-align: center;
+    margin: 0 20px 15px 0;
+    float: left
+}
+
+.rightCont .contentSec .contHolder .member h3 {
+    padding: 10px 0 10px 55px;
+    color: #fff;
+    font: 16px 'robotoregular';
+    text-align: left
+}
+
+h3.client {
+    background: url(../images/dbClient.png) no-repeat top left #ea682b;
+}
+h3.vendor {
+    background: url(../images/dbVendor.png) no-repeat top left #ea682b;
+}
+h3.order {
+    background: url(../images/dborders.jpg) no-repeat top left #ea682b;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 5px;
+}
+
+.rightCont .contentSec .contHolder .member .countMbr {
+    padding: 35px 0;
+    display: block;
+    width: 110px;
+    height: 36px;
+    margin: 30px auto 0;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    background-color: #fff;
+    text-align: center;
+    font: 26px 'robotolight';
+    color: #27646a;
+}
+
+/*.rightCont .contentSec .contHolder .member .countMbr1{ padding:20px 0;  height:70px; font:50px 'robotolight'; color:#27646a;}*/
+
+.leftMenu ul li a.organiser:before {
+    font-family: FontAwesome;
+    font-size: 20px;
+    content: "\f2ba";
+    margin: 0 41px 0 -58px;
+}
+
+/*Report design*/
+.rightCont .contentSec .contHolder .reportSec {
+    margin-bottom: 10px
+}
+
+.rightCont .contentSec .contHolder .reportSec label {
+    text-align: left;
+    width: 25%
+}
+
+.rightCont .contentSec .contHolder .reportSec input[type="text"] {
+    max-width: 250px;
+    width: 40%;
+    margin: 0 20px 0 0;
+    padding: 0 10px
+}
+
+.rightCont .contentSec .contHolder .reportSec input[type="submit"] {
+    padding: 6px 20px
+}
+
+.rightCont .contentSec .contHolder .texteditor {
+    width: 89%;
+    padding: 10px 0;
+    margin: 0
+}
+
+.texteditor label {
+    text-align: left;
+    width: auto;
+}
+
+.rightCont .contentSec .contHolder .tableData .tblInpt input[type="text"] {
+    margin-bottom: 5px;
+    height: 30px
+}
+
+.rightCont .contentSec .contHolder .tableData .addBtn {
+    background-color: #27646a;
+    float: right;
+    display: block;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 20px 0 30px 10px
+}
+
+.rightCont .contentSec .contHolder .inpHolder .eachInptFull {
+    width: 100%;
+    float: left;
+    margin-bottom: 10px
+}
+
+/*Changes new*/
+.rightCont .contentSec .contHolder .inpHolder .rightInptSec {
+    float: right;
+    width: 31%
+}
+
+.rightCont .contentSec .contHolder .inpHolder .eachInptFull input[type="text"] {
+    width: 70%;
+    margin-bottom: 0
+}
+
+/*Changes new*/
+.rightCont .contentSec .contHolder .inpHolder .eachInptFull input[type="text"].smallInpt {
+    width: 33% !important;
+    float: left
+}
+
+/*New added*/
+.rightCont .contentSec .contHolder .inpHolder .eachInptFull input[type="text"].smallInpt:last-child {
+    float: right
+}
+
+.rightCont .contentSec .contHolder .inpHolder .eachInptFull span {
+    font-size: 11px;
+    float: right;
+    display: block;
+    margin: 15px 0;
+}
+
+/*Changes new*/
+.rightCont .contentSec .contHolder .inpHolder .eachInptFull .leftInpt {
+    float: left;
+    width: 44%
+}
+
+.rightCont .contentSec .contHolder .inpHolder .eachInptFull .rightInpt {
+    float: right;
+    width: 44%
+}
+
+.rightCont .contentSec .contHolder .inpHolder .rightInptSec input[type="submit"] {
+    float: right;
+    width: auto
+}
+
+/*Changes new*/
+.rightCont .contentSec .contHolder .inpHolder .rightInptSec input[type="reset"] {
+    float: right;
+    width: auto;
+    margin: 0 10px
+}
+
+/*Changes new*/
+.rightCont .contentSec .bulkSec {
+    width: auto;
+    padding: 19px;
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.rightCont .contentSec .bulkSec .styled-select {
+    width: auto;
+    float: left;
+    margin: 0 0 0 10px;
+}
+.rightCont .contentSec .bulkSec .styled-select select {
+    padding: 0 30px 0 10px;
+}
+
+.rightCont .contentSec .bulkSec label {
+    float: right;
+    width: auto;
+    margin: 12px 0 0
+}
+
+.rightCont .contentSec .contHolder .inpHolder .rightInptSec .styled-select, .rightCont .contentSec .contHolder .inpHolder .eachInptFull .styled-select {
+    margin: 5px 0 0;
+    float: left
+}
+
+/*Changes new*/
+.spanalert {
+    color: #c36;
+    display: block;
+    float: right;
+    font-size: 13px;
+    margin: 5px 0 15px;
+    width: 75%;
+}
+
+.circle {
+    position: relative;
+}
+
+/*thiyagu css*/
+.searchSec input[type="button"] {
+    float: left;
+    padding: 7px 30px;
+    margin: 20px 5px 0;
+}
+
+.regSec .formSec .formHolder .formSlider .formEach .eachInptLeft {
+    position: relative
+}
+
+#strength {
+    border-radius: 100%;
+    float: right;
+    height: 16px;
+    margin-right: 5px;
+    position: absolute;
+    right: 6px;
+    top: 11px;
+    width: 16px;
+}
+
+.stnthcls {
+    float: left;
+    margin-top: 3px;
+}
+
+.stnthcls1 {
+    background-color: #F00;
+    float: left;
+}
+
+.stnthcls2 {
+    background-color: #FC0;
+    float: left;
+}
+
+.stnthcls3 {
+    background-color: #0C0;
+    float: left;
+}
+
+.formReset {
+    position: relative
+}
+
+.formReset #strength {
+    right: -17px
+}
+
+.uptab {
+    margin: 20px 0
+}
+
+.uptab ul {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #CCC;
+}
+
+.uptab ul li {
+    float: left;
+    list-style: none;
+    background-color: #efefef;
+    margin-right: 1px
+}
+
+.uptab ul li i {
+    width: auto;
+    text-align: center;
+    float: left;
+    color: #999;
+    margin-top: 8px;
+}
+
+.uptab ul li a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    float: left;
+    display: block;
+    color: #666;
+    padding: 15px 30px;
+}
+
+.uptab ul li a:hover,
+.uptab .current {
+    color: #FFF !important;
+    background-color: #00437c;
+}
+
+.tab_hold {
+    display: none
+}
+
+.tab_hold:first-child {
+    display: block
+}
+
+.rightCont .contentSec .contHolder .tableData tbody td a#c_active {
+    border: 1px solid white;
+    background: url(../images/active.png) no-repeat center center #27646a;
+}
+
+.rightCont .contentSec .contHolder .tableData tbody td a#c_inactive {
+    border: 1px solid white;
+    background: url(../images/inactive.png) no-repeat center center #d2000f;
+}
+
+a.downloadPDF {
+    border: 1px solid white;
+    background: url(../images/pdf-icon-1.png) no-repeat center center;
+    background-size: 30px 27px;
+    width: 22px;
+    position: relative;
+    padding: 12px 2px;
+}
+a.downloadPDF.typeReport:after,
+a.downloadPDF.typeInvoice:after{
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+    padding: 3px 4px 4px;
+    /* border: 1px solid black; */
+    /* background: #F02122; */
+    background: #00437C;
+    color: White;
+    text-align: center;
+    font: 10px "courier", sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: -3px;
+    right: -2px;
+}
+
+a.downloadPDF.large {
+    display: block;
+    border: none;
+    background: url(../images/pdf-icon-1.png) no-repeat center center;
+    background-size: 60px 54px;
+    width: 44px;
+    height: 29px;
+    position: relative;
+    margin: 37px 17px;
+}
+a.downloadPDF.large.typeReport:after,
+a.downloadPDF.large.typeInvoice:after{
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    padding: 4px 4px 4px;
+    /* border: 1px solid black; */
+    /* background: #F02122; */
+    background: #00437C;
+    color: White;
+    text-align: center;
+    font: 17px "courier", sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: -8px;
+    right: -4px;
+}
+
+a.downloadPDF.typeReport:after {
+    content: 'R';
+}
+a.downloadPDF.typeInvoice:after {
+    content: 'I';
+}
+
+/*--file mapping*/
+.readfile {
+    color: #06F;
+    cursor: pointer
+}
+
+.filecolumns {
+    display: none
+}
+
+.sampledata {
+    width: 100%;
+    overflow: auto;
+    margin: 6px 0
+}
+
+.filecolumns span {
+    font-weight: bold;
+    color: #06F;
+    font-size: 14px;
+    margin: 5px 2px
+}
+
+#clientfiles table, .filecolumns table {
+    float: left
+}
+
+.multiselect {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    float: right;
+    font-size: 12px;
+    height: 84px;
+    overflow: auto;
+    width: 76%;
+}
+
+.multiselect ul {
+    height: auto;
+    margin: 2px 0px
+}
+
+.multiselect ul li {
+    border-bottom: 1px solid #f3f3f3;
+    height: auto;
+    padding: 2px 5px;
+    cursor: pointer
+}
+
+.multiselect ul li span {
+    color: inherit;
+    margin: 1px 5px
+}
+
+.multiselect ul li:hover, .multiselect ul li.select, .select b, .select b:hover {
+    background-color: #09C;
+    color: #FFF;
+}
+
+.reportSec .styled-select {
+    width: 25%;
+    float: left;
+    margin: 6px
+}
+
+.butRight {
+    float: left;
+    margin: 3px 0px;
+    padding: 0 10px
+}
+
+.inputradio {
+    margin: 6px 0px;
+    float: left;
+    font-size: 13px;
+    width: 78%
+}
+
+.inputradio input {
+    margin: 5px 3px 0px 36px
+}
+
+.mansechold {
+    display: none
+}
+
+.mansechold:first-child {
+    display: block
+}
+
+input.viewrep {
+    padding: 12px 18px;
+}
+
+.eachInptboth {
+    width: 95%
+}
+
+.bulk {
+    float: left;
+    margin: 10px 6px;
+    width: 30%
+}
+
+label.bulk {
+    text-align: right;
+    margin: 20px 6px
+}
+
+.headtr, .jsort thead td, .popupclose {
+    cursor: pointer
+}
+
+td span.ui-icon {
+    float: left;
+    margin: 0 !important;
+    width: 16px !important
+}
+
+span.iconclr, .tablesorter-headerUnSorted span {
+    display: none
+}
+
+#file_tab form {
+    border-bottom: 1px solid #f3f3f3;
+    float: left;
+    display: none;
+    margin: 6px 0px
+}
+
+img.delrow {
+    float: right;
+    cursor: pointer
+}
+
+#notify_tab .eachInptFull, #notes_tab .eachInptFull {
+    width: 89%
+}
+
+#notify_tab span {
+    float: left;
+    margin: 10px 26px 0 0;
+    font-size: 12px;
+    display: inline-block;
+}
+
+#notify_tab label {
+    margin: 0;
+    width: auto;
+    float: none;
+}
+
+.filterform, .noteval, #mailform, #notesform {
+    display: none
+}
+
+.tblInpt input[type="text"] {
+    float: left
+}
+
+.logoimg {
+    margin: 20px auto;
+    width: 70%;
+}
+
+.logoimg img {
+    width: 100%
+}
+
+.editlogo {
+    float: right;
+    margin-bottom: 5px
+}
+
+.radiohalf {
+    max-width: 160px;
+    width: 48%;
+    float: left
+}
+
+.repinfo {
+    height: 100px
+}
+
+.pagingLeft {
+    float: left;
+    width: 55%
+}
+
+.pagingfirst label {
+    float: left;
+    width: 45%
+}
+
+.pagingfirst .styled-select {
+    margin: 0;
+    width: 50%
+}
+
+.un-rey {
+    background: #ffc;
+}
+
+.notify textarea {
+    float: left;
+    margin: 0 0 0 4px;
+    padding: 5px 0;
+    height: 100px;
+}
+
+.pagingsection, .pagingfirst {
+    float: left;
+    width: 30%;
+    padding-top: 10px
+}
+
+.pagingfirst {
+    padding: 0
+}
+
+.pagingsection span {
+    margin-top: 10px;
+    font-size: 13px
+}
+
+.sec_yes, .sec_no {
+    display: block;
+    float: left;
+    padding: 5px 10px;
+    background-color: #27646a;
+    color: #fff;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    cursor: pointer
+}
+
+.sec_no {
+    background-color: #d2000f;
+}
+
+.tabtag {
+    margin: 15px 0 10px;
+    display: block;
+}
+
+.nofiles {
+    background-color: #efefef;
+    padding: 10px;
+    margin: 10px 0 0;
+    font-size: 13px
+}
+
+span.between {
+    float: left !important;
+    text-align: center;
+    width: 15%
+}
+
+.eachInptFull label {
+    margin: 10px 10px 0 0
+}
+
+.eachInptFull input[type="text"] {
+    float: left
+}
+
+.minidate {
+    float: left;
+    width: 76.5%
+}
+
+.hiddentable, #propform {
+    display: none
+}
+
+.reptag {
+    margin: 0 6px 6px 6px;
+    display: block;
+    float: left
+}
+
+#custom_tab .eachInptFull {
+    width: 89%
+}
+
+#custom_tab input[type="checkbox"] {
+    margin: 1px 3px
+}
+
+#custom_tab span {
+    width: 20%;
+    float: left;
+    margin: 10px 5px 0;
+    font-size: 12px
+}
+
+#custom_tab h3 {
+    color: #000;
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    margin: 5px 0
+}
+
+#custom_tab i {
+    font-size: 12px
+}
+
+.line2 {
+    float: left;
+    width: 100%
+}
+
+.addresshold, .popupsec, .editcon, .radiouniq, .utilhold {
+    display: none
+}
+
+span.span2, .span4 {
+    position: relative;
+    font-size: 14px;
+    padding: 0 2px;
+    float: right;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.right2 {
+    float: left;
+    margin: 0 5px;
+}
+
+.left2 {
+    position: absolute;
+    right: -20px
+}
+
+.span3 {
+    font-size: 14px;
+    height: 26px;
+    float: right;
+    width: 76.5%;
+    margin-top: 10px
+}
+
+.ui-tooltip-content {
+    font-size: 14px
+}
+
+.repfrm .styled-select {
+    width: 98%
+}
+
+.comp {
+    height: 140px;
+    margin-bottom: 6px
+}
+
+/*thiyagu css end */
+#overlay {
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    z-index: 2
+}
+
+.frmSec {
+    width: 400px;
+    margin: 100px auto 0;
+    background-color: #fff;
+    padding: 30px 20px 20px;
+    max-height: 300px;
+    overflow: auto
+}
+
+.frmSec h2 {
+    font: 14px 'robotoregular';
+    margin-bottom: 5px;
+    float: none;
+    font-weight: bold
+}
+
+.frmSec p {
+    margin-bottom: 20px
+}
+
+.frmSec .close {
+    float: right;
+    position: relative;
+    top: -15px;
+    cursor: pointer
+}
+
+.rightCont .contentSec .contHolder .ProfileInfo .eachInfo span p {
+    margin: 0;
+    float: right
+}
+
+.multiselect ul li:hover i, .select i {
+    color: #FFF
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+}
+
+.overlay .tblSec {
+    width: 800px;
+    margin: 100px auto;
+    background-color: #fff;
+    overflow: auto;
+    height: 400px;
+}
+
+.textdown {
+    float: right;
+    width: 76%;
+    font-size: 12px
+}
+
+.clearleft {
+    position: relative
+}
+
+.marginclear {
+    margin: 0 !important
+}
+
+.overlay .tblSec .ordTbl {
+    width: 96%;
+    margin: 2%
+}
+
+.overlay .tblSec h2 {
+    background-color: #333;
+    padding: 10px;
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    float: none
+}
+
+.overlay .tblSec h2 span {
+    float: right;
+    color: #FFF
+}
+
+.overlay .tblSec .ordTbl thead td {
+    padding: 10px;
+    border-bottom: 1px solid #a0c5e4;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #d6e6f5;
+}
+
+.overlay .tblSec .ordTbl tbody td {
+    padding: 5px 10px;
+    border-bottom: 1px solid #d5d5d5;
+    font-size: 13px;
+    color: #555
+}
+
+.vendrchk strong, #overlay strong, .textdown strong {
+    font-weight: bold;
+    font-size: 13px
+}
+
+.vendrchk em, #overlay em, .textdown em {
+    font-style: italic
+}
+
+#newql:disabled {
+    opacity: 0.8;
+    background-image: url('../images/loading.gif');
+    background-repeat: no-repeat;
+    background-position: right 15px;
+}
+
+#bottomseal {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+
+.noclose .ui-dialog-titlebar-close {
+    display: none;
+}
